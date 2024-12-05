@@ -18,7 +18,7 @@ public class Main {
         Hilo01 hilo01 = new Hilo01(limiteSuperior,limiteInferior,array);
         Hilo02 hilo02 = new Hilo02(limiteSuperior,limiteInferior,array);
 
-
+        hilo01.start();
         hilo02.start();
 
 

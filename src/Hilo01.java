@@ -16,14 +16,12 @@ public class Hilo01 extends Thread {
     @Override
     public void run() {
 
-
-        pintarCabeza();
-        pintarBajo();
+        pintar();
 
     }
     private void pintarCabeza() {
         int longitud = 10;
-
+        System.out.println("");
         for(int i = 0;i<longitud ; i++) {
             System.out.print(i + "\t\t");
 
@@ -32,21 +30,29 @@ public class Hilo01 extends Thread {
         System.out.print("-------------------------"
                 + "----------------------------------"
                 + "---------------\n");
+
     }
-    private void pintarBajo()  {
+    private void pintar()  {
         Random r = new Random();
         int numeroAleatorio = 0;
         try{
             for(int i = 0; i < 5 ; i++){
+                pintarCabeza();
                 numeroAleatorio = r.nextInt(nMayor-nMenor) + nMenor;
 
                 arrayPintar[i] = numeroAleatorio;
-                System.out.print(arrayPintar[i] + "\t\t");
-                Thread.sleep(500);
+                pintarArray();
+                Thread.sleep(5000);
             }
         }catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
+    }
+    public void pintarArray(){
+        for(int i = 0;i<arrayPintar.length ;i++){
+            System.out.print(arrayPintar[i]+ "\t\t");
+        }
+        System.out.println("");
     }
 }
