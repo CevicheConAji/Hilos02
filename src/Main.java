@@ -1,5 +1,5 @@
-import java.util.Random;
-import java.util.Scanner;
+
+import java.util.*;
 
 public class Main {
 
@@ -20,7 +20,6 @@ public class Main {
 
         hilo01.start();
         hilo02.start();
-
 
     }
 }
